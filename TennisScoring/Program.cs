@@ -13,6 +13,29 @@ class Program
 
         Singles usOpen = new Singles(player1, player2);
         //Simulation of the a game; Player1 aced the whole game
+        usOpen.addServerPoints(true);
+        usOpen.addServerPoints(true);
+        usOpen.addServerPoints(false);
+        usOpen.addServerPoints(false);
+        usOpen.addServerPoints(true);
+        usOpen.addServerPoints(false);      //deuce
+        usOpen.addServerPoints(true);       //ad-in
+        usOpen.addServerPoints(false);      //deuce
+        usOpen.addServerPoints(false);
+        usOpen.addServerPoints(false);       //Winner!
+
+
+
+
+        usOpen.printAllPoints();
+
+
+
+
+
+
+
+
 
 
 
