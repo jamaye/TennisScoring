@@ -12,7 +12,6 @@ namespace TennisScoring
         { get; set; }
         public Player Player2
         { get; set; }
-        
         //Constructor
         public Singles(Player player1, Player player2)
         {

@@ -8,11 +8,14 @@ namespace TennisScoring
 {
     internal class Team
     {
-        public Player Server
+       public Player Server
         { get; set; }
        public Player NotServer
         { get; set; }
-
+        
+       public bool TheirServe 
+       { get; set; }
+        
         //Constructor
         public Team(Player server, Player notServer)
         {

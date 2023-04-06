@@ -13,17 +13,19 @@ namespace TennisScoring
         { get; set; }
         public string Location
         { get; set; }
-
+        public bool Service    
+        { get; set; }
         //Constructor
         public Player(string name, string location)
         {
             Name = name;
             Location = location;
+            Service = false;
         }
 
         public void printInfo() 
         {
-            Console.WriteLine(Name + " | " +Location);
+            Console.WriteLine(Name + " | " +Location + " | Service: " + Service);
         }
     }
 }
