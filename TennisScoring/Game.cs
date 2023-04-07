@@ -138,16 +138,13 @@ namespace TennisScoring
             }
         }
         //Method that adds the ended game to the set
-        public bool isGameEnd()
+        public void isGameEnd()
         {
             if (gameEnd)
             {
                 base.addGameToSet(server, nonServer, gameEnd);
                 //resets the whole game class again for the next game
-                
-                return true;
             }
-            else return false;
         }
 
         public void resetGame() 
@@ -167,7 +164,7 @@ namespace TennisScoring
                 Console.Write(s + " | ");
             }
             Console.WriteLine("\nNumber of games played: " + server.Count);
-            Console.Write("\nNon Server Points: ");
+            Console.Write("Non Server Points: ");
             foreach (string s in nonServer)
             {
                 Console.Write(s + " | ");

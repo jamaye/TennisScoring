@@ -29,9 +29,8 @@ namespace TennisScoring
             game.gameEnd = e;
             allGames.Add(game);
             Console.WriteLine("---- This recent game added ----");  //
-            game.printAllPoints();      //
+            allGames[allGames.Count-1].printAllPoints();      //
             Console.WriteLine("[Size of allGames list: " + allGames.Count +"]");  //
-
             Console.WriteLine("---- END ----");  //
 
         }

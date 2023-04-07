@@ -22,8 +22,7 @@ class Program
 
         bool serverPoint = true;        //is the argument inside the addServerPoints call; will change
         string answer = "";
-        for (int i = 0; i < 3; i++)
-        {
+        
             while (!usOpen.gameEnd)
             {
                 Console.Write("Did server earn the point: ");
@@ -37,6 +36,12 @@ class Program
                     serverPoint = false;
                 }
                 usOpen.addServerPoints(serverPoint);       //Winner!; exit loop
+                //Checks if the game ended, if so, reset the whole game
+                //We have to add more info abt the set stuff; for now it will run infinitely
+                if (usOpen.gameEnd == true)
+                {
+                    usOpen.resetGame();
+                }
             }
             usOpen.resetGame();
             //Checks if the server won the game
@@ -68,7 +73,7 @@ class Program
 
                 }
             }
-        }
+        
 
 
         //
