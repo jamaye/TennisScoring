@@ -25,7 +25,7 @@ namespace TennisScoring
 
         public void printInfo() 
         {
-            Console.WriteLine(Name + " | " +Location + " | Service: " + Service);
+            Console.WriteLine(Name /*+ " | " +Location + " | Service: " + Service*/);
         }
     }
 }

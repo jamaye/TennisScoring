@@ -12,6 +12,7 @@ namespace TennisScoring
         public List<string> nonServer;
         public bool deuce;
         public bool gameEnd;
+        public Player gameWinner;
 
         public Game()
         {
@@ -107,9 +108,10 @@ namespace TennisScoring
             return deuce;
         }
         
-        //Method that deals with scores after 40
+        //Method that deals with scores after 40; player of winPoint will have a point added to them
         public void pointsAbove40(List<string> winPoint, List<string> lostPoint)
         {
+            
             if (deuce)
             {
                 //Winning player is ad
@@ -120,7 +122,7 @@ namespace TennisScoring
             }
             else if (winPoint.Last() == "AD")
             {
-                //This means the list of winPoint won
+                //This means the player of winPoint won
                 Console.WriteLine("!!!!We have a winner(1)!!!!");              //
                 gameEnd = true;
             }
@@ -132,6 +134,7 @@ namespace TennisScoring
             }
             else if (winPoint.Last() == "40" && lostPoint.Last() == "AD")
             {
+                //Game is back to deuce
                 winPoint.Add("40");
                 lostPoint.Add("40");
                 isItDeuce();
@@ -156,8 +159,11 @@ namespace TennisScoring
             deuce = gameEnd = false;
         }
 
+
+        //Testing
         public void printAllPoints() 
         {
+            Console.WriteLine("---------------------------------");
             Console.Write("Server Points: ");
             foreach (string s in server)
             {
@@ -170,7 +176,9 @@ namespace TennisScoring
                 Console.Write(s + " | ");
             }
             Console.WriteLine("\nNumber of games played: " + nonServer.Count);
-            Console.WriteLine("Is thegame over: " + gameEnd);
+            Console.WriteLine("Is the game over: " + gameEnd);
+            Console.WriteLine("---------------------------------");
+
 
 
         }
